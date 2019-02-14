@@ -5,32 +5,36 @@
 <?php endif; ?>
 
 <ul class="resource-list preview">
-<?php 
+<?php
 $headingTerm = $this->siteSetting('browse_heading_property_term', 'dcterms:title');
+$bodyTerm = $this->siteSetting('browse_body_property_term', 'dcterms:description');
+
 foreach ($this->resources as $resource):
     $heading = $resource->value($headingTerm, ['default' => $this->translate('[Untitled]')]);
+    $termValue = $resource->value($bodyTerm);
+    if ($termValue && $termValue->type() == 'resource:item')
+        $body = $termValue->valueResource()->displayTitle();
+    else
+       $body = $termValue;
 ?>
     <li class="item resource">
         <?php if ($primaryMedia = $resource->primaryMedia()): ?>
-            <img
-                src="<?php echo $this->escapeHtml($primaryMedia->thumbnailUrl('medium')); ?>"
-                title="<?php echo $this->escapeHtml($primaryMedia->displayTitle()); ?>"
-                alt="<?php echo $this->escapeHtml($primaryMedia->mediaType()); ?> thumbnail"
-            >
+        <?php echo $resource->linkRaw($this->thumbnail($primaryMedia, 'medium')); ?>
         <?php endif; ?>
         <h4><?php echo $resource->link($heading); ?></h4>
-        <?php if ($date = $resource->value('dcterms:date')): ?>
-        <div class="date"><?php echo $date; ?></div>
+        <?php if ($body): ?>
+        <div class="description"><?php echo $body;?></div>
         <?php endif; ?>
     </li>
 <?php endforeach; ?>
 </ul>
-
+<p>
 <?php
 $linkText = $this->linkText == '' ? $this->translate('Browse all') : $this->linkText;
 echo $this->hyperlink($linkText, $this->url(
     'site/resource', ['controller' => 'item', 'action' => 'browse'], ['query' => $this->query], true
 ));
 ?>
+</p>
 
 </div>
