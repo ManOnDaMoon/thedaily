@@ -31,6 +31,7 @@ $this->trigger('view.layout');
             <?php else: ?>
             <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
             <?php endif; ?>
+            <?php if (!isset($isLogin)):?>
             <div id="search-container">
                 <?php echo $this->partial('common/search-form'); ?>
                 <button type="button" class="search-toggle" aria-label="Toggle search"></button>
@@ -43,6 +44,7 @@ $this->trigger('view.layout');
             ]);
             ?>
             </nav>
+            <?php endif;?>
         </header>
         <div id="content" role="main">
             <?php echo $this->content; ?>
