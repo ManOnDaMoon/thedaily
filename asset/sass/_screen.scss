@@ -51,7 +51,14 @@ a {
 
 p a,
 span a {
-    background-color: $primary-color;
+    //background-color: $primary-color; //Modified
+    border-bottom: 2px solid $primary-color; //Added
+}
+
+p a:hover,
+span a:hover {
+    background-color: $primary-color; //Added
+    border-bottom: 2px solid $primary-color; //Added
 }
 
 p,
@@ -762,7 +769,13 @@ footer {
 }
 
 .value a span {
-    background-color: $primary-color;
+    //background-color: $primary-color; //Modified
+    border-bottom: 2px solid $primary-color; //Added 
+}
+
+.value a span:hover {
+    background-color: $primary-color; //Added
+    border-bottom: 2px solid $primary-color; //Added 
 }
 
 .value a.metadata-browse-link {
