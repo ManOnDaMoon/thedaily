@@ -16,7 +16,7 @@
 
 //Colors
 
-$primary-color: yellow;
+$primary-color: Gainsboro; // Modified
 
 //Susy
 $susy: (
@@ -26,3 +26,8 @@ $susy: (
   output: float,
   gutter-position: inside,
 );
+
+// Custom modifications
+.tl-timeline a {
+color: black !important;
+}
