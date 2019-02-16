@@ -1,0 +1,47 @@
+// Custom modifications for RestrictedSites and others modules
+
+// Cosmetic
+p a,
+span a {
+    background-color: transparent; //Modified
+    border-bottom: 2px solid $primary-color; //Added
+}
+
+p a:hover,
+span a:hover {
+    background-color: $primary-color; //Added
+    border-bottom: 2px solid $primary-color; //Added
+}
+
+.value a span {
+    background-color: transparent; //Modified
+    border-bottom: 2px solid $primary-color; //Added 
+}
+
+.value a span:hover {
+    background-color: $primary-color; //Added
+    border-bottom: 2px solid $primary-color; //Added 
+}
+
+// RestrictedSites
+
+.login #content h1 {
+	width: span(8);
+	margin:0 auto 24px auto;
+}
+
+.site-login {
+	width: span(8);
+	margin:auto;
+}
+
+// Slider
+#itemfiles,
+.lSSlideOuter .media-render {
+    background-color: $primary-color; //Modified
+}
+
+// Timeline
+.tl-timeline a {
+color: black !important;
+}

@@ -4,8 +4,10 @@
 
 @media screen {
     @import "screen";
+    @import "modm-restrictedsites"; //Added
 }
 
 @media screen and (max-width:640px) {
     @import "mobile";
+    @import "modm-restrictedsites-mobile"; //Added
 }
