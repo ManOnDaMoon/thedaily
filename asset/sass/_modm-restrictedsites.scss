@@ -25,20 +25,32 @@ span a:hover {
 
 // RestrictedSites
 
-.login #content h1 {
-	width: span(8);
-	margin:0 auto 24px auto;
-}
-
 .site-login {
 	width: span(8);
 	margin:auto;
 }
 
+.messages {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px dashed $primary-color;
+}
+
+.messages .error {
+	color: red;
+}
+.messages .success {
+	color: green;
+}
+.messages .warning {
+	color: dark orange;
+}
+
+
 // Slider
 #itemfiles,
 .lSSlideOuter .media-render {
-    background-color: $primary-color; //Modified
+    background-color: $primary-color;
 }
 
 // Timeline
