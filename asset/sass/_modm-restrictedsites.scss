@@ -1,26 +1,26 @@
 // Custom modifications for RestrictedSites and others modules
 
 // Cosmetic
-p a,
-span a {
+#content p a,
+#content span a {
     background-color: transparent; //Modified
     border-bottom: 2px solid $primary-color; //Added
 }
 
-p a:hover,
-span a:hover {
+#content p a:hover,
+#content span a:hover {
     background-color: $primary-color; //Added
     border-bottom: 2px solid $primary-color; //Added
 }
 
 .value a span {
     background-color: transparent; //Modified
-    border-bottom: 2px solid $primary-color; //Added 
+    border-bottom: 2px solid $primary-color; //Added
 }
 
 .value a span:hover {
     background-color: $primary-color; //Added
-    border-bottom: 2px solid $primary-color; //Added 
+    border-bottom: 2px solid $primary-color; //Added
 }
 
 // RestrictedSites
