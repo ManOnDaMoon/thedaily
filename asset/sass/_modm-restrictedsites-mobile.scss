@@ -6,3 +6,7 @@
 	width: 95%;
 	//margin:auto;
 }
+
+#linked-resources tr > td:first-child span a {
+    color: $primary-color;
+}
