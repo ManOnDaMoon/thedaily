@@ -6,6 +6,14 @@
 	width: 95%;
 	//margin:auto;
 }
+.site-login form .field .field-meta {
+        width: 100%;
+    }
+
+    .site-login form .field > .inputs {
+        width: 100%;
+    }
+
 
 #linked-resources tr > td:first-child span a {
     color: $primary-color;

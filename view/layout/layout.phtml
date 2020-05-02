@@ -50,9 +50,16 @@ $this->trigger('view.layout');
                 background-color: <?php echo $accentColor; ?>;
             }
 
-            #content p a,
-            #content span a,
+            span a.resource-link,
+            .value a .resource-link {
+                background-color: transparent;
+            }
+
+            #content h1 a, #content h2 a, #content h3 a,
+            #content p a:not(.button),
+            #content span a:not(.resource-link),
             #content .value a span,
+            #content .value a:not(.resource-link),
             #content a.metadata-browse-direct-link,
             #content a.metadata-browse-link,
             #content a.resource-link span {
@@ -60,9 +67,12 @@ $this->trigger('view.layout');
                 border-bottom: 2px solid <?php echo $accentColor; ?>;
             }
 
-            #content p a:hover,
-            #content span a:hover,
+            #content h1 a:hover, #content h2 a:hover, #content h3 a:hover,
+            #content p a:not(.button):hover,
+            #content span a:not(.resource-link):hover,
+            #content .value a:hover,
             #content .value a:hover span,
+            #content .value a:not(.resource-link):hover,
             #content a.metadata-browse-link:hover,
             #content a.metadata-browse-direct-link:hover,
             #content a.resource-link:hover span {

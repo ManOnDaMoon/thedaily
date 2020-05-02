@@ -768,9 +768,9 @@ footer {
     padding: 0 $spacing-s;
 }
 
-/* .value a span { */
-/*     background-color: $primary-color;  */
-/* } */
+.value a span {
+    background-color: $primary-color; 
+}
 
 .value a.metadata-browse-link {
     float: right;
