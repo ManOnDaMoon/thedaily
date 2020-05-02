@@ -1,23 +1,23 @@
 // Custom modifications for RestrictedSites and others modules
 
 // Cosmetic
-#content p a:not(.button),
-#content span a ,
-a.metadata-browse-direct-link,
-a.resource-link span,
-.value a span {
-    background-color: transparent; //Modified
-    border-bottom: 2px solid $primary-color; //Added
-}
+/* #content p a:not(.button), */
+/* #content span a , */
+/* a.metadata-browse-direct-link, */
+/* a.resource-link span, */
+/* .value a span { */
+/*     background-color: transparent; //Modified */
+/*     border-bottom: 2px solid $primary-color; //Added */
+/* } */
 
-#content p a:hover:not(.button),
-#content span a:hover,
-a.metadata-browse-direct-link:hover,
-a.resource-link:hover span,
-.value a span:hover {
-    background-color: $primary-color; //Added
-    border-bottom: 2px solid $primary-color; //Added
-}
+/* #content p a:hover:not(.button), */
+/* #content span a:hover, */
+/* a.metadata-browse-direct-link:hover, */
+/* a.resource-link:hover span, */
+/* .value a span:hover { */
+/*     background-color: $primary-color; //Added */
+/*     border-bottom: 2px solid $primary-color; //Added */
+/* } */
 
 // RestrictedSites
 

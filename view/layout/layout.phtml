@@ -49,6 +49,26 @@ $this->trigger('view.layout');
             .sub-menu {
                 background-color: <?php echo $accentColor; ?>;
             }
+
+            #content p a,
+            #content span a,
+            #content .value a span,
+            #content a.metadata-browse-direct-link,
+            #content a.metadata-browse-link,
+            #content a.resource-link span {
+                background-color: transparent;
+                border-bottom: 2px solid <?php echo $accentColor; ?>;
+            }
+
+            #content p a:hover,
+            #content span a:hover,
+            #content .value a:hover span,
+            #content a.metadata-browse-link:hover,
+            #content a.metadata-browse-direct-link:hover,
+            #content a.resource-link:hover span {
+                background-color: <?php echo $accentColor; ?>; //Added
+                border-bottom: 2px solid <?php echo $accentColor; ?>; //Added
+            }
             <?php endif; ?>
         </style>
     </head>
