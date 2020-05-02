@@ -1,25 +1,19 @@
 // Custom modifications for RestrictedSites and others modules
 
 // Cosmetic
-//#content p a,
-#content span a {
-    background-color: transparent; //Modified
-    border-bottom: 2px solid $primary-color; //Added
-}
-
-//#content p a:hover,
-#content span a:hover {
-    background-color: $primary-color; //Added
-    border-bottom: 2px solid $primary-color; //Added
-}
-
+#content p a:not(.button),
+#content span a ,
 a.metadata-browse-direct-link,
+a.resource-link,
 .value a span {
     background-color: transparent; //Modified
     border-bottom: 2px solid $primary-color; //Added
 }
 
+#content p a:hover:not(.button),
+#content span a:hover,
 a.metadata-browse-direct-link:hover,
+a.resource-link:hover,
 .value a span:hover {
     background-color: $primary-color; //Added
     border-bottom: 2px solid $primary-color; //Added
@@ -31,6 +25,14 @@ a.metadata-browse-direct-link:hover,
 	width: span(8);
 	margin:auto;
 }
+
+    .site-login form .field .field-meta {
+        width: span(5 of 12 alpha);
+    }
+
+    .site-login form .field > .inputs {
+        width: span(7 of 12 omega);
+    }
 
 .messages {
 	padding-top: 10px;
