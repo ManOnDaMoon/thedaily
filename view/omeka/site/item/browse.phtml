@@ -51,18 +51,16 @@ $sortHeadings = [
 <?php $this->trigger('view.browse.before'); ?>
 <ul class="resource-list">
     <?php foreach ($items as $item): ?>
-    
+
 <!--     MODM -->
     <?php
     $bodyTerm = $this->siteSetting('browse_body_property_term', 'dcterms:description');
-    $termValue = $item->value($bodyTerm);
-    if ($termValue && $termValue->type() == 'resource:item')
-        $body = $termValue->valueResource()->displayTitle();
-    else
-        $body = $termValue
+    $bodyTermValue = $item->value($bodyTerm);
+    $bodyResource = $bodyTermValue ? $bodyTermValue->valueResource() : null;
+    $body = ($bodyTermValue && $bodyResource) ? $bodyResource->displayTitle() : $bodyTermValue;
     ?>
 <!--     /MODM -->
-    
+
     <li class="item resource">
         <?php if ($thumbnail = $this->thumbnail($item, 'medium')): ?>
         <?php echo $item->linkRaw($thumbnail); ?>
@@ -71,13 +69,13 @@ $sortHeadings = [
         <?php if ($date = $item->value('dcterms:date')): ?>
         <div class="date"><?php echo $date; ?></div>
         <?php endif; ?>
-        
+
 <!--         MODM -->
         <?php if ($body): ?>
         <div class="description"><?php echo $body;?></div>
         <?php endif; ?>
 <!--         /MODM -->
-        
+
     </li>
     <?php endforeach; ?>
 </ul>

@@ -11,11 +11,9 @@ $bodyTerm = $this->siteSetting('browse_body_property_term', 'dcterms:description
 
 foreach ($this->resources as $resource):
     $heading = $resource->value($headingTerm, ['default' => $this->translate('[Untitled]')]);
-    $termValue = $resource->value($bodyTerm);
-    if ($termValue && $termValue->type() == 'resource:item')
-        $body = $termValue->valueResource()->displayTitle();
-    else
-       $body = $termValue;
+    $bodyTermValue = $resource->value($bodyTerm);
+    $bodyResource = $bodyTermValue ? $bodyTermValue->valueResource() : null;
+    $body = ($bodyTermValue && $bodyResource) ? $bodyResource->displayTitle() : $bodyTermValue;
 ?>
     <li class="item resource">
         <?php if ($primaryMedia = $resource->primaryMedia()): ?>
