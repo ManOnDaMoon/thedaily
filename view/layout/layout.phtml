@@ -31,7 +31,8 @@ $this->trigger('view.layout');
             .site-page-pagination a,
             #top-nav > ul > li > a,
             #featured .record a,
-            .site-page-pagination a {
+            .site-page-pagination a,
+            .results .result-title a {
                 color: <?php echo $accentColor; ?>
             }
 
@@ -46,7 +47,9 @@ $this->trigger('view.layout');
             #featured .featured-meta h3,
             .advanced-search,
             .value a span,
-            .sub-menu {
+            .sub-menu,
+            .results li a,
+            .results > ul + a {
                 background-color: <?php echo $accentColor; ?>;
             }
 
@@ -83,6 +86,7 @@ $this->trigger('view.layout');
     </head>
 
     <?php echo $this->htmlElement('body'); ?>
+        <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
         <?php echo $userBar; ?>
         <header>
             <h1>
